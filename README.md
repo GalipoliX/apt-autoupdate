@@ -10,3 +10,6 @@ To send mails, postfix must be configured properly.
 
 After running it can send an automatic email to inform you about the result.
 It also writes status files to /tmp/ directory which can be monitored with tools like nagios/icinga
+
+
+apt insstall aptitude needrestart mailutils
