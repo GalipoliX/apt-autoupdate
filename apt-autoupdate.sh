@@ -5,7 +5,7 @@
 # Description:  Plugin for automaticly updating your apt based servers
 #               
 # History:
-# 20230520      Created plugin
+# 20230520      Created script
 #
 #################################################################################
 # Usage:        ./apt-autoupdate.sh
@@ -15,7 +15,7 @@
 
 
 # Set the variables for mails.
-admin_mail="a@domain.de"
+admin_mail="admin@domain.de"
 sender_mail="autoupdate@domain.de"
 
 # Should Server reboot if requiered and update successfull
