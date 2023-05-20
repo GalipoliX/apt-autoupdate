@@ -15,8 +15,8 @@
 
 
 # Set the variables for mails.
-admin_mail="m.geschwinder@maerkischer-kreis.de"
-sender_mail="autoupdate@maerkischer-kreis.de"
+admin_mail="admin@domain.de"
+sender_mail="autoupdate@domain.de"
 
 # Should Server reboot if requiered and update successfull
 autoreboot="true"
