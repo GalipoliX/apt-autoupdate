@@ -5,7 +5,7 @@
 # Description:  Plugin for automaticly updating your apt based servers
 #               
 # History:
-# 20230520      Created plugin (types: charge, output, Input Freq, Output Freq, lasttest date, lasttest result, load)
+# 20230520      Created plugin
 #
 #################################################################################
 # Usage:        ./apt-autoupdate.sh
