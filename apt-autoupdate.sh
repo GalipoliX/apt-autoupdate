@@ -118,7 +118,7 @@ else
 
 	write_out "Creating status file for monitoring"
 	info=$(cat $tmpfile | grep "packages upgraded")
-	echo $info > /tmp/autoupgrade-ok
+	echo "$info - $(date)" > /tmp/autoupgrade-ok
 	write_out "Result: $info"
 	if [ -f /tmp/autoupgrade-failed ]; then rm /tmp/autoupgrade-failed; fi;
 	
