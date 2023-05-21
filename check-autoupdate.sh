@@ -51,13 +51,13 @@ function check_prog {
 }
 
 
-if [ -f /tmp/autoupgrade-ok ]
+if [ -f /opt/autoupgrade-ok ]
 then
-	cat  /tmp/autoupgrade-ok
+	cat  /opt/autoupgrade-ok
 	exit $STATE_OK
-elif [ -f /tmp/autoupgrade-failed ]
+elif [ -f /opt/autoupgrade-failed ]
 then
-	echo "Last autoupgrade failed at $(cat /tmp/autoupgrade-failed)!"
+	echo "Last autoupgrade failed at $(cat /opt/autoupgrade-failed)!"
 	exit $STATE_CRITICAL
 else
 	echo "Cant find autoupgrade info! Has the Script run?"
