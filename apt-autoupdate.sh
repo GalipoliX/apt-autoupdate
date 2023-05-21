@@ -107,8 +107,8 @@ then
 	write_out "Something went wrong!" >> ${tmpfile}
 
 	write_out "Creating status file for monitoring"
-	echo $(date) > /tmp/autoupgrade-failed
-	if [ -f /tmp/autoupgrade-ok ]; then rm /tmp/autoupgrade-ok; fi;
+	echo $(date) > /opt/autoupgrade-failed
+	if [ -f /opt/autoupgrade-ok ]; then rm /opt/autoupgrade-ok; fi;
 
 	write_out "Skipping all further steps and sending mail!"
 	mail -s "Automatic upgrade of server $hostname FAILED $(date)" -a "From: Autoupdate - $hostname <$sender_mail>" ${admin_mail} < ${tmpfile}
@@ -118,9 +118,9 @@ else
 
 	write_out "Creating status file for monitoring"
 	info=$(cat $tmpfile | grep "packages upgraded")
-	echo "$info - $(date)" > /tmp/autoupgrade-ok
+	echo "$info - $(date)" > /opt/autoupgrade-ok
 	write_out "Result: $info"
-	if [ -f /tmp/autoupgrade-failed ]; then rm /tmp/autoupgrade-failed; fi;
+	if [ -f /opt/autoupgrade-failed ]; then rm /opt/autoupgrade-failed; fi;
 	
 
 
