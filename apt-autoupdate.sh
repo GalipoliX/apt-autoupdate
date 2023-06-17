@@ -11,7 +11,7 @@
 # Usage:        ./apt-autoupdate.sh
 # 		The Script is ment to be run with cronjob as root
 #################################################################################
-
+PATH=$PATH:/usr/sbin:/bin # Set path
 
 
 # Set the variables for mails.
